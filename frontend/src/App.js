@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { Route, Switch, HashRouter } from "react-router-dom";
+import React from 'react';
 import Home from './pages/Home/Home';
 import { ThemeProvider } from "styled-components";
 import theme from './utility/theme/theme';
 import { GlobalStyles } from './GlobalStyles.css';
+import UseScrollNavigation from './utility/HelperFunction/useScrollNavigation';
+import { BrowserRouter } from "react-router-dom";
+
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles/>
-            <HashRouter basename="/">
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                </Switch>
-            </HashRouter>
-        </ThemeProvider>
+        <BrowserRouter>
+            <ThemeProvider theme={theme}>
+                <GlobalStyles />
+                <UseScrollNavigation/>
+                <Home />
+            </ThemeProvider>
+        </BrowserRouter>
     );
 }
 

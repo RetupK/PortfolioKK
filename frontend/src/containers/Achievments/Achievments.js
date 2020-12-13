@@ -1,9 +1,8 @@
 import React from "react";
 import { Carousel } from 'react-responsive-carousel';
-import RenderPhoto from "../../components/RenderPhoto/RenderPhoto";
 import SectionDescription from "../../components/SectionDescription/SectionDescription";
 import { SingleElementContainer, SubSectionContainer, ImgDiv, DivTest, TextContainer, Text } from "./Achievments.css";
-import { achievmentsData } from "./AchievmentsData";
+import { achievmentsData, sectionAchievmentTitle } from "./AchievmentsData";
 import ReactImageMagnify from "react-image-magnify";
 import 'react-medium-image-zoom/dist/styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -16,19 +15,20 @@ const Achievments = () => {
         display: 'inline-block',
         margin: '0px 8px',
         width: 50,
+        
     };
 
     return (
-        <>
+        <div id="#Osiągnięcia">
             <SectionDescription
-                title="Osiągnięcia"
-                subTitle="Osiąganie celów i zawziętość mam we krwi, oto moje wyróżnienia"
+                title={sectionAchievmentTitle.title}
+                subTitle={sectionAchievmentTitle.subTitle}
             />
-            <Carousel showStatus={false} autoPlay={false} stopOnHover={true} infiniteLoop={true} renderIndicator={(onClickHandler, isSelected, index, label) => {
+            <Carousel showThumbs={false} showStatus={false} autoPlay={true} stopOnHover={true} infiniteLoop={true} renderIndicator={(onClickHandler, isSelected, index, label) => {
                 if (isSelected) {
                     return (
                         <li
-                            style={{ ...indicatorStyles, background: '#000' }}
+                            style={{ ...indicatorStyles, background: '#000'}}
                             aria-label={`Selected: ${label} ${index + 1}`}
                             title={`Selected: ${label} ${index + 1}`}
                         />
@@ -49,7 +49,7 @@ const Achievments = () => {
                 );
             }}>
                 {achievmentsData.map((item) =>
-                    <SingleElementContainer>
+                    <SingleElementContainer key={item.id}>
                         <SubSectionContainer>
                             <SectionDescription title={item.title} subSection />
                             <TextContainer>
@@ -58,9 +58,6 @@ const Achievments = () => {
                         </SubSectionContainer>
                         <ImgDiv>
                             <DivTest>
-                                {/* <Zoom>
-                                    <RenderPhoto url={item.img} width="200" />
-                                </Zoom> */}
                                 <ReactImageMagnify 
                                 hintTextMouse="Najedź by przybliżyć"
                                     {...{
@@ -85,7 +82,7 @@ const Achievments = () => {
                     </SingleElementContainer>
                 )}
             </Carousel>
-        </>
+        </div>
     )
 }
 

@@ -1,19 +1,19 @@
 export const NavbarData = [
     {
         id: 0,
-        name: "Home",
+        name: "Karta",
     },
     {
         id: 1,
-        name: "About Me",
+        name: "O mnie",
     },
     {
         id: 2,
-        name: "Resume",
+        name: "Umiejętności",
     },
     {
         id: 3,
-        name: "Skills",
+        name: "Osiągnięcia",
     },
     {
         id: 4,
@@ -21,6 +21,6 @@ export const NavbarData = [
     },
     {
         id: 5,
-        name: "Contact",
+        name: "Kontakt",
     },
 ]

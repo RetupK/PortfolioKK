@@ -13,17 +13,25 @@ export const GreetingContainerImgBg = styled.div`
 
 export const GreetingCardContainer = styled.div`
     margin: 0 auto;
-    width: 55%;
-    height: 65vh;
-    background: ${props => props.theme.colors.color1};
+    width: 74%;
+    height: 100%;
     box-shadow: ${props => props.theme.box_shadows.shadow2};
+    background: ${props => props.theme.colors.color1};
     border-radius: 4px;
     flex-direction: column;
+    position: relative;
+    top: 100px;
     @media (max-width: 767px) {
         width: 95%;
         padding-top: 70px;
         height: auto;
-        margin-top: 85px;
+        margin-top: 50px;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 86%;
+    }
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        width: 86%;
     }
 `
 
@@ -33,6 +41,17 @@ export const CardContentContainer = styled.div`
     @media (max-width: 767px) {
         flex-direction: column;
         padding: 0px 10px;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        align-items: center;
+        display: flex;
+        padding: 30px;
     }
 `
 
@@ -45,11 +64,19 @@ export const ImgContainer = styled.div`
         height: 200px;
         margin: 0px auto 30px auto;
     }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 300px;
+        height: 300px;
+    }
+    @media (min-width: 1200px) and (max-width: 1500px) {
+        width: 330px;
+        height: 330px;
+    }
 `
 
 export const SingleContentContainer = styled.div`
     flex: 2;
-    padding: 0px 30px;
+    padding: 0px 0px 0px 30px;
     @media (max-width: 767px) {
         padding: 10px 10px;
     }
@@ -73,6 +100,7 @@ export const KeyValueContainer = styled.div`
     flex-wrap: wrap;
     width: 100%;
     padding: 30px 0px;
+    border-top: 1px solid ${props => props.theme.colors.color4};
 `
 
 export const SingleElementValue = styled.div`
@@ -88,6 +116,10 @@ export const DescText = styled(Title)`
     letter-spacing: 1px;
     margin: 0;
     @media (max-width: 767px) {
+        font-size: 12px;
+        text-align: left;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
         font-size: 12px;
         text-align: left;
     }

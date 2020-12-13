@@ -24,8 +24,8 @@ export const SingleCircleWrapper = styled.div`
     width: 150px;
     margin: 0px 50px 50px 50px;
     @media (max-width: 767px) {
-        width: 100px;
-        margin: 0px 5px 50px 5px;
+        width: 120px;
+        margin: 0px 20px 50px 20px;
     }
 `
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
     display: flex;
@@ -21,6 +22,18 @@ export const NavbarContainer = styled.div`
         flex-direction: column;
         height: 60px;
     }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 100%;
+        text-align: center;
+        height: ${props => props.isShow ? "100%" : "60px"};
+        padding: 0;
+        display: flex;
+        align-items: center;
+        background: white;
+    }
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        width: 250px;
+    }
 `
 
 export const PortfolioTextContainer = styled.div`
@@ -38,12 +51,20 @@ export const PortfolioTextContainer = styled.div`
         @media (max-width: 768px) {
             margin: 33px 0px 40px -2px;
         }
+        @media (min-width: 768px) and (max-width: 1199px){
+            margin: 24px 0px 40px -6px;
+        }
     }
     @media (max-width: 768px) {
         width: 60%;
         display: flex;
         align-items: center;
         height: 56px;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        height: 60px;
+        padding: 0px 50px;
+        width: 57%;
     }
 `
 
@@ -56,16 +77,38 @@ export const Ul = styled.ul`
         background: white;
         box-shadow: ${props => props.theme.box_shadows.shadow3};
     }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 100%;
+    }
+`
+
+export const NavLink = styled(Link)`
+    color: black;
+    &:hover{
+        color: black;
+        text-decoration: none;
+    }
 `
 
 export const List = styled.li`
     padding: 5px 0px;
     font-weight: bold;
     letter-spacing: 1px;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.02);
+    }
     @media (max-width: 768px) {
         border-bottom: 1px solid ${props => props.theme.colors.color4};
         margin-right: 10px;
         padding-left: 10px;
+        display: ${props => props.isShow ? "flex" : "none"}
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        border-bottom: 1px solid ${props => props.theme.colors.color4};
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-top:30px;
         display: ${props => props.isShow ? "flex" : "none"}
     }
 `
@@ -78,5 +121,9 @@ export const FooterContainer = styled.footer`
     font-size: 25px;
     @media (max-width: 768px) {
         display: none;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        display: ${props => props.isShow ? "flex" : "none"};
+        justify-content: center;
     }
 `

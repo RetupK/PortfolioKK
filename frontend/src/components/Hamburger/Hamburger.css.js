@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBurger = styled.div`
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: 1199px) {
         position: absolute;
         top: 17px;
         left: 2rem;

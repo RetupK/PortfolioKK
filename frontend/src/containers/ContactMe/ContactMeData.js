@@ -1,3 +1,8 @@
+export const contactMeTitle = {
+    title: "Skontaktuj się ze mną",
+    subTitle: "Wypełnij formularz"
+}
+
 export const formData = [
     {
         id: 0,

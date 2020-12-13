@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/esm/Button';
 import { useForm, FormProvider } from 'react-hook-form'
-import { FormComp, } from "./Form.css";
 
 const Form = ({ initialValues, children, onSubmit, }) => {
     const methods = useForm({

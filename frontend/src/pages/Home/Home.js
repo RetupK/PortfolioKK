@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import Spinner from "../../components/Spinner/Spinner";
 import AboutMeContainer from "../../containers/AboutMeContainer/AboutMeContainer";
 import Achievments from "../../containers/Achievments/Achievments";
 import Contact from "../../containers/ContactMe/ContactMe";
@@ -10,10 +11,9 @@ import WorkProcess from "../../containers/WorkProcess/Workprocess";
 import { HomeMainContainer, ContentContainer } from "./Home.css";
 
 const Home = () => {
-
     return (
         <HomeMainContainer>
-            {/* <Spinner/> */}
+            <Spinner/>
             <Navbar />
             <ContentContainer>
                 <GreetingContainer/>

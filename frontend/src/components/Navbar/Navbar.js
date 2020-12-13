@@ -1,5 +1,5 @@
 import React, {lazy, Suspense, useState} from "react";
-import { NavbarContainer, PortfolioTextContainer, Ul, List, FooterContainer } from "./Navbar.css";
+import { NavbarContainer, PortfolioTextContainer, Ul, NavLink, List, FooterContainer } from "./Navbar.css";
 import portfolioText from "../../assests/images/portfolioText.png";
 import { NavbarData } from "./NavbarData";
 import Loading from "../Spinner/SpinnerLoading/SpinnerLoading.css";
@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isShow, setIsShow] = useState(false);
 
     return (
-        <NavbarContainer>
+        <NavbarContainer isShow={isShow}>
             <PortfolioTextContainer>
                 <Hamburger setIsShow={setIsShow} isShow={isShow}/>
                 <Suspense fallback={<Loading/>}>
@@ -20,10 +20,12 @@ const Navbar = () => {
             </PortfolioTextContainer>
             <Ul isShow={isShow}>
                 {NavbarData.map((item) =>
-                    <List isShow={isShow}>{item.name}</List>
+                    <NavLink key={item.id} to={`/#${item.name}`}>
+                        <List isShow={isShow}>{item.name}</List>
+                    </NavLink>
                 )}
             </Ul>
-            <FooterContainer>
+            <FooterContainer isShow={isShow}>
                 Krystian Kalinowski
             </FooterContainer>
         </NavbarContainer>

@@ -45,5 +45,6 @@ export const Span = styled.span`
     letter-spacing: 1.5px;
     @media (max-width: 767px) {
         margin: 20px 0px;
+        font-size: 12px;
     }
 `

@@ -7,8 +7,15 @@ export const SingleElementContainer = styled.div`
     text-align: left;
     display: flex;
     width: 100%;
+    padding: 0px 0px 40px;
     @media (max-width: 767px) {
         flex-direction: column;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        align-items: center;
+    }
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        align-items: center;
     }
 `
 
@@ -32,6 +39,13 @@ export const TextContainer = styled.div`
     @media (max-width: 767px) {
         width: 95%;
         margin-top: 50px;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 90%;
+        padding: 0px 10px;
+    }
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        width: 80%;
     }
 `
 

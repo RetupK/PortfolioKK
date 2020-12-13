@@ -1,3 +1,8 @@
+export const skillsTitle = {
+    title: "Umiejętności",
+    subTitle: ",,W teorii nie ma różnicy pomiędzy teorią i praktyką. W praktyce - jest''"
+}
+
 export const SkillsData = [
     {
         id: 0,

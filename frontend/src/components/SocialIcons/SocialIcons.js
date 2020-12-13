@@ -2,12 +2,12 @@ import React from "react";
 import { SocialContainer, SocialIconsContainer, SingleIconLinkedInWrapper } from "./SocialIcons.css";
 import { socialIconsData } from "./SocialIconsData";
 
-const SocialIcons = ({  }) => { //more icons stayed in css.
+const SocialIcons = () => {
     return (
         <SocialContainer>
             <SocialIconsContainer>
                 {socialIconsData.map((item) =>
-                    <SingleIconLinkedInWrapper>
+                    <SingleIconLinkedInWrapper key={item.id}>
                         <a href={item.path} target="_blank" rel="noopener noreferrer">{item.icon}</a>
                     </SingleIconLinkedInWrapper>
                 )}

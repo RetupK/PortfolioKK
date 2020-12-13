@@ -35,6 +35,12 @@ export const IconsAndArrowWrapper = styled.div`
     display: flex;
     align-items: center;
     padding: 0px 30px;
+    @media (min-width: 768px) and (max-width: 1199px){
+        padding: 0;
+    }
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        padding: 0;
+    }
 `
 
 export const ArrowIcon = styled(AiOutlineArrowRight)`
@@ -42,6 +48,12 @@ export const ArrowIcon = styled(AiOutlineArrowRight)`
     margin-left: 80px;
     @media (max-width: 767px) {
         display: none;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        margin: 10px;
+    }
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        margin: 20px;
     }
 `
 

@@ -6,6 +6,8 @@ export const LogoWrapper = styled.div`
     width: 100vw;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 10000;
 `
 
 const grow = keyframes`

@@ -29,4 +29,10 @@ export const PersonalSkillsSection = styled.div`
         width: 90%;
         padding: 0;
     }
+    @media (min-width: 768px) and (max-width: 1199px){
+        width: 80%;
+    }
+    @media (min-width: 1200px) and (max-width: 1600px){
+        width: 70%;
+    }
 `
