@@ -1,8 +1,10 @@
 {
   "name": "presentation",
-  "homepage": "https://retupk.github.io/presentation",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "target": "http://localhost:3000"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.4.1",
