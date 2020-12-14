@@ -4,7 +4,6 @@ import SectionDescription from "../../components/SectionDescription/SectionDescr
 import { SingleElementContainer, SubSectionContainer, ImgDiv, DivTest, TextContainer, Text } from "./Achievments.css";
 import { achievmentsData, sectionAchievmentTitle } from "./AchievmentsData";
 import ReactImageMagnify from "react-image-magnify";
-import 'react-medium-image-zoom/dist/styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Achievments = () => {

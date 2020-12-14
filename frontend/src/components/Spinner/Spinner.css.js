@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, {keyframes} from "styled-components";
 
 export const LogoWrapper = styled.div`
@@ -100,7 +99,7 @@ const loadIcons = keyframes`
     }
 `
 
-export const Svg = styled(FontAwesomeIcon)`
+export const Svg = styled.div`
     font-size: 24px;
     position: absolute;
     top: 0px;

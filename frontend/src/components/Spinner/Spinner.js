@@ -1,6 +1,8 @@
-import { faBriefcase, faHome, faUsers } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 import { LogoWrapper, Screen, NofreezeSpinner, SpinnerDiv, SpinnerDivContainer, Svg } from "./Spinner.css";
+import { AiOutlineHome } from "react-icons/ai";
+import { FaUsers } from "react-icons/fa";
+import { BsBriefcaseFill } from "react-icons/bs"
 
 const AnimatedSplash = () => {
     return (
@@ -8,9 +10,15 @@ const AnimatedSplash = () => {
             <Screen>
                 <NofreezeSpinner>
                     <SpinnerDivContainer>
-                        <Svg icon={faHome} />
-                        <Svg icon={faUsers} />
-                        <Svg icon={faBriefcase} />
+                        <Svg>
+                            <AiOutlineHome />
+                        </Svg>
+                        <Svg>
+                            <FaUsers />
+                        </Svg>
+                        <Svg>
+                            <BsBriefcaseFill />
+                        </Svg>
                         <SpinnerDiv />
                     </SpinnerDivContainer>
                 </NofreezeSpinner>

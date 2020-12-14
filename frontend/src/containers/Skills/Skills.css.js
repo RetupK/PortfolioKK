@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Parallax } from "../../utility/RepeatedStyle/RepeatedStyle";
 
 export const SkillsMainContainer = styled.div`
     display: flex;
@@ -10,11 +9,6 @@ export const SkillsMainContainer = styled.div`
     @media (max-width: 768px) {
         width: 100%;
     }
-`
-
-export const ParallaxBox = styled(Parallax)`
-    min-height:100vh;
-    z-index: 20;
 `
 
 export const SingleSection = styled.div`
